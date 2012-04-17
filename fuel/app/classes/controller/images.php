@@ -57,7 +57,8 @@ class Controller_Images extends Controller_Template
                 {
 
 
-                    Debug::dump($file);
+                    //Debug::dump($file);
+
 
                     $val = Model_Image::validate('create');
 
@@ -67,6 +68,7 @@ class Controller_Images extends Controller_Template
                                         'caption' => Input::post('caption'),
                                         'filepath' => $file['saved_as'],
                                         'description' => Input::post('description'),
+                                        'filter' => Input::post('filter'),
                                     ));
 
                                     if ($image and $image->save())

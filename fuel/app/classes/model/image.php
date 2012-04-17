@@ -7,6 +7,7 @@ class Model_Image extends Model
 		'id',
 		'caption',
 		'filepath',
+        'filter',
 		'description',
 		'created_at',
 		'updated_at',

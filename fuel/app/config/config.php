@@ -186,6 +186,10 @@ return array(
 		 */
 		'packages'  => array(
 			'orm',
+            'ninjauth',
+            'oauth2',
+            'oauth',
+            'sentry',
 		),
 
 		/**
@@ -211,7 +215,9 @@ return array(
 		 * add it like 'session' => 'auth'.
 		 * If you don't want the config in a group use null as groupname.
 		 */
-		'config'  => array(),
+		'config'  => array(
+            'custom_config',
+        ),
 
 		/**
 		 * Language files to autoload

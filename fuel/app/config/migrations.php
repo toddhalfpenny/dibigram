@@ -4,13 +4,15 @@ return array(
 	array(
 		'app' => 
 		array(
-			'default' => 1,
+			'default' => 2,
 		),
 		'module' => 
 		array(
 		),
 		'package' => 
 		array(
+			'ninjauth' => 3,
+			'sentry' => 2,
 		),
 	),
 	'folder' => 'migrations/',

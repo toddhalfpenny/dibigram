@@ -17,6 +17,30 @@
 
 			</div>
 		</div>
+
+
+
+<?php
+        $my_filters = Config::get('custom_config.filters');
+        //Debug::dump($my_filters);
+
+
+?>
+
+        <div class="clearfix">
+            <?php echo Form::label('Filters', 'filters'); ?>
+
+            <div class="input">
+                <?php echo Form::select('filter','',$my_filters); ?>
+
+            </div>
+        </div>
+
+
+
+
+
+
 		<div class="clearfix">
 			<?php echo Form::label('Description', 'description'); ?>
 

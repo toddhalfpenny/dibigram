@@ -20,6 +20,10 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
+        $is_logged_in = Sentry::Check();
+        Debug::dump($is_logged_in);
+
+
 		return Response::forge(View::forge('welcome/index'));
 	}
 

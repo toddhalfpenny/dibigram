@@ -1,11 +1,10 @@
-<h2>Viewing #<?php echo $image->id; ?></h2>
+<h2><?php echo $image->caption; ?></h2>
 
-<p>
-	<strong>Caption:</strong>
-	<?php echo $image->caption; ?></p>
-<p>
-	<strong>Filepath:</strong>
-	<?php echo $image->filepath; ?></p>
+
+
+    <img class="filter-<?php echo $image->filter; ?>" src="<?php echo 'http://dibifuel.local/uploads';?>/<?php echo $image->filepath; ?>" width="350px" height="250"/>
+
+
 <p>
 	<strong>Description:</strong>
 	<?php echo $image->description; ?></p>

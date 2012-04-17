@@ -1,30 +1,47 @@
 <h2>Listing Images</h2>
 <br>
 <?php if ($images): ?>
-<table class="zebra-striped">
-	<thead>
-		<tr>
-			<th>Caption</th>
-			<th>Filepath</th>
-			<th>Description</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-<?php foreach ($images as $image): ?>		<tr>
 
-			<td><?php echo $image->caption; ?></td>
-			<td><?php echo $image->filepath; ?></td>
-			<td><?php echo $image->description; ?></td>
-			<td>
-				<?php echo Html::anchor('images/view/'.$image->id, 'View'); ?> |
-				<?php echo Html::anchor('images/edit/'.$image->id, 'Edit'); ?> |
-				<?php echo Html::anchor('images/delete/'.$image->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
 
-			</td>
-		</tr>
-<?php endforeach; ?>	</tbody>
-</table>
+        <ul class="thumbnails">
+<?php foreach ($images as $image): ?>
+
+
+        <li class="span3">
+            <div class="thumbnail">
+
+                <img class="filter-<?php echo $image->filter; ?>" src="<?php echo 'http://dibifuel.local/uploads';?>/<?php echo $image->filepath; ?>" width="260px" height="180"/>
+                <h5><?php echo $image->caption; ?></h5>
+                <p><?php echo $image->description; ?></p>
+
+                <p>
+                    <?php echo Html::anchor('images/view/'.$image->id, 'View', array('class' => 'btn btn-primary')); ?>
+
+
+                </p>
+
+
+
+            </div>
+        </li>
+
+
+
+
+
+
+
+
+
+				<?php //echo Html::anchor('images/edit/'.$image->id, 'Edit'); ?>
+				<?php //echo Html::anchor('images/delete/'.$image->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>
+
+
+
+<?php endforeach; ?>
+
+    </ul>
+    <hr />
 
 <?php else: ?>
 <p>No Images.</p>
